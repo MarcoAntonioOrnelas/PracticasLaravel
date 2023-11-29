@@ -1,16 +1,12 @@
 <?php
-
 namespace Tests\Unit;
-
 use PHPUnit\Framework\TestCase;
-
 class ExampleTest extends TestCase
 {
-   
     public function testraiz():void{
-        $a=9;
+        $a=16;
         $raiz= app('App\Http\Controllers\ControladorTest')->root($a);
-        $this->assertEquals(3, $raiz);
+        $this->assertEquals(4, $raiz);
     }
     public function testEmpiezconA() : void {
         $pal ="Assert";
@@ -18,8 +14,8 @@ class ExampleTest extends TestCase
         $this->assertStringStartsWith($caracter,$pal);
     }
     public function testTienepalabra():void{
-        $frase = "Hola Gente";
-        $palabra = "Hola";
+        $frase = "Buenas Tardes";
+        $palabra = "Buenas Tardes";
         $this->assertStringContainsString($palabra, $frase);
     }
     public function testMulti():void{
@@ -31,6 +27,5 @@ class ExampleTest extends TestCase
     public function testEsArreglo() : void {
         $Arreglo = [];
         $this-> assertIsArray($Arreglo);
-    }
-    
+    }    
 }
